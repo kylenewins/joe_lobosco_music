@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 import WaveSurfer from 'wavesurfer.js'
 import {faPlay, faCircleNotch, faPause, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {fadeIn} from '../animations'
@@ -14,7 +15,9 @@ import tracklist from "../../assets/tracklist.json"
 })
 export class MusicPlayerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
   // pieOhMy = new Audio()
   public ws: WaveSurfer;
   public tracklist = tracklist.tracks
@@ -38,8 +41,10 @@ export class MusicPlayerComponent implements OnInit {
       // scrollParent: true,
       barWidth: 5
     })
-    this.ws.load(this.tracklist[0].ref)
+ 
+    this.ws.load('https://kylenewins.github.io/joe_lobosco_music/assets/music/Pie-Oh-My.mp3')
     this.activeTrack = this.tracklist[0].ref
+    console.log(this.activeTrack)
   }
 
   playHandler(ref, index){
@@ -64,6 +69,7 @@ export class MusicPlayerComponent implements OnInit {
   }
 
   findTrack(ref, index){
+    console.log('finding...', ref)
     return new Promise (resolve => {
       this.buttonSwitch(index, "spin")
       this.ws.load(ref)

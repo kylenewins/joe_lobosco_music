@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http'
 
 import {MatCardModule} from '@angular/material/card'
 import {MatButtonModule} from '@angular/material/button'
@@ -28,7 +29,8 @@ import { ContactComponent } from './contact/contact.component'
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
