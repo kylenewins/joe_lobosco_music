@@ -1,0 +1,12 @@
+{
+    "tracks": [
+        {
+            "title": "Pie Oh My",
+            "ref": "../../assets/music/Pie-Oh-My.mp3"
+        },
+        {
+            "title": "Woodland",
+            "ref": "../../assets/music/Woodland.mp3"
+        }
+    ]
+}

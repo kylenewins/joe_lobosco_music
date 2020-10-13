@@ -1,0 +1,26 @@
+/* #play{
+    width: 75vw;
+} */
+#spacer{
+    width: 75vw
+}
+#waveform{
+
+}
+.pause-btns{
+    display: none;
+}
+.spinner-btns{
+    display: none;
+}
+
+#contact-btn{
+    height: 60px;
+    border: none;
+    margin-left: 45%;
+    margin-top:20%;
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px gray;
+    font-size: 200%
+}

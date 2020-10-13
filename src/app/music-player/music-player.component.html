@@ -1,0 +1,35 @@
+<div id="main-content" @fadeIn>
+    <div id="spacer">
+        <div  id="waveform"></div>
+    </div>
+    <mat-card>
+        <!-- <mat-card-title>Playlist</mat-card-title> -->
+        <mat-card-content>
+            <table style="width: 100%">
+                <colgroup>
+                    <col span="1" style="width:75%">
+                    <col span="1" style="width:15%">
+                </colgroup>
+                    <tbody>
+                        <ng-container *ngFor="let track of tracklist; let i = index">
+                            <tr>
+                                <td>{{track.title}}</td>
+                                <td>
+                                    <button class="play-btns hvr-sweep-to-right" id="play-{{i}}" mat-stroked-button (click)="playHandler(track.ref, i)"><fa-icon [icon]="faPlay"></fa-icon></button>
+                                    <button class="spinner-btns" mat-stroked-button disabled id="spinner-{{i}}">
+                                        <fa-icon [icon]="faCircleNotch" [spin]="true" transform="grow-9"></fa-icon>
+                                    </button>
+                                    <button class="pause-btns" id="pause-{{i}}" mat-stroked-button (click)="pauseHandler(i)"><fa-icon [icon]="faPause"></fa-icon></button>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card>
+    <button mat-stroked-button routerLink="/contact" class="hvr-wobble-vertical button" id="contact-btn">
+        Contact <fa-icon [icon]='faEnvelope'></fa-icon>
+    </button>
+</div>
+
+

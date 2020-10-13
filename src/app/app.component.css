@@ -1,0 +1,10 @@
+p{
+    color: whitesmoke
+}
+#title{
+    margin-left: 40px;
+    font-size: 200%;
+    text-shadow: 2px 2px gray;
+    color: white;
+    font-family: 'Lobster', cursive;
+}

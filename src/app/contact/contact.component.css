@@ -1,0 +1,20 @@
+#email-form{
+    right:20vw;
+    height:70vh;
+}
+label{
+    display: inline-block;
+    width: 100%;
+    /* margin-left: 40%; */
+}
+.form-field{
+    margin-bottom:10px;
+}
+textarea{
+    width: 100%;
+    height:200px;
+}
+#sub-btn{
+    /* width: 100%; */
+    display: inline-block;
+}
