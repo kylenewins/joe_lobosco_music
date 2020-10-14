@@ -13,7 +13,7 @@
                     <tbody>
                         <ng-container *ngFor="let track of tracklist; let i = index">
                             <tr>
-                                <td>{{track.title}}</td>
+                                <td><p class="track-names">{{track.title}}</p></td>
                                 <td>
                                     <button class="play-btns hvr-sweep-to-right" id="play-{{i}}" mat-stroked-button (click)="playHandler(track.ref, i)"><fa-icon [icon]="faPlay"></fa-icon></button>
                                     <button class="spinner-btns" mat-stroked-button disabled id="spinner-{{i}}">

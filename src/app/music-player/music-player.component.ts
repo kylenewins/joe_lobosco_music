@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding,  OnDestroy} from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import WaveSurfer from 'wavesurfer.js'
 import {faPlay, faCircleNotch, faPause, faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -10,10 +10,11 @@ import tracklist from "../../assets/tracklist.json"
 @Component({
   selector: 'app-music-player',
   templateUrl: './music-player.component.html',
-  styleUrls: ['./music-player.component.css', './hover.css'],
+  styleUrls: ['./music-player.component.css', '../hover.css'],
   animations:[fadeIn]
 })
-export class MusicPlayerComponent implements OnInit {
+
+export class MusicPlayerComponent implements OnInit, OnDestroy{
 
   constructor(
     private http: HttpClient
@@ -33,15 +34,19 @@ export class MusicPlayerComponent implements OnInit {
     this.waveSurferInit()
   }
 
+  ngOnDestroy():void{
+    this.ws.pause()
+  }
+
   waveSurferInit(){
     this.ws = WaveSurfer.create({
       container: "#waveform",
       waveColor: "white",
-      progressColor: 'gray',
+      progressColor: 'rgb(104,151,117)',
       // scrollParent: true,
       barWidth: 5
     })
- 
+    this.ws.pause()
     this.ws.load('https://kylenewins.github.io/joe_lobosco_music/assets/music/Pie-Oh-My.mp3')
     this.activeTrack = this.tracklist[0].ref
     console.log(this.activeTrack)

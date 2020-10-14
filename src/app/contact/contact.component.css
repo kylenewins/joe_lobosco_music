@@ -6,9 +6,14 @@ label{
     display: inline-block;
     width: 100%;
     /* margin-left: 40%; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%
 }
 .form-field{
     margin-bottom:10px;
+    background: none;
+    border: 1px, whitesmoke, solid;
+    color: whitesmoke;
 }
 textarea{
     width: 100%;
