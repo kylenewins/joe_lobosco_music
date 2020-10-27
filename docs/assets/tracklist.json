@@ -2,11 +2,11 @@
     "tracks": [
         {
             "title": "Pie Oh My",
-            "ref": "./assets/Pie-Oh-My.mp3"
+            "ref": "./assets/music/Pie-Oh-My.mp3"
         },
         {
             "title": "Woodland",
-            "ref": "./assets/Woodland.mp3"
+            "ref": "./assets/music/Woodland.mp3"
         }
     ]
 }

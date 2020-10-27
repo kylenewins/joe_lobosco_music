@@ -47,7 +47,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
       barWidth: 5
     })
     this.ws.pause()
-    this.ws.load('https://kylenewins.github.io/joe_lobosco_music/assets/music/Pie-Oh-My.mp3')
+    this.ws.load(this.tracklist[0].ref)
     this.activeTrack = this.tracklist[0].ref
     console.log(this.activeTrack)
   }
