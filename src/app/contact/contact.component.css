@@ -1,6 +1,8 @@
-#email-form{
-    right:20vw;
-    height:70vh;
+.grid-box{
+    display: inline-block;
+    float: left;
+    width: 35vw;
+    margin-left: 10px;
 }
 label{
     display: inline-block;
@@ -22,4 +24,23 @@ textarea{
 #sub-btn{
     /* width: 100%; */
     display: inline-block;
+}
+#about-card{
+    background: none;
+    border: none;
+}
+#about{
+    align-content: center;
+    font-size: 150%;
+    font-family: 'Oswald', sans-serif;
+}
+#back-btn{
+    height: 60px;
+    border: none;
+    margin-left: 45%;
+    margin-top:5%;
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px gray;
+    font-size: 200%
 }
