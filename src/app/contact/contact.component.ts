@@ -17,6 +17,8 @@ export class ContactComponent implements OnInit {
   faMusic = faMusic;
   
   ngOnInit(): void {
+    document.getElementById("contact-btn").style.display = "none"
+    document.getElementById("music-btn").style.display = "inline-block"
   }
 
 }

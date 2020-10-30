@@ -35,8 +35,8 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: rgb(23,23,23);
-    color: white;
+    background-color: rgb(240,204,180);
+    color: rgb(23,23,23);
     font-weight: 600;
   }
 
@@ -103,9 +103,15 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner" @fadeIn>
+<div class="toolbar" role="banner" >
   <a id="title" routerLink="/">Joe Lobosco Music</a>
   <div class="spacer"></div>
+  <button mat-stroked-button routerLink="/contact" class="hvr-wobble-vertical button router-btns" id="contact-btn">
+    Contact <fa-icon [icon]='faEnvelope'></fa-icon>
+  </button>
+  <button mat-stroked-button routerLink="/" class="hvr-wobble-vertical button router-btns" id="music-btn">
+    Music <fa-icon [icon]='faMusic'></fa-icon>
+  </button>
 </div>
 
 <div class="content" role="main">
@@ -114,8 +120,9 @@
   <div @fadeIn>
     <router-outlet></router-outlet>
   </div>
-
 </div>
+
+
 
 
 

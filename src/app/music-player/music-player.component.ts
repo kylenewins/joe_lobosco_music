@@ -32,6 +32,8 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.waveSurferInit()
+    document.getElementById("contact-btn").style.display = "inline-block"
+    document.getElementById("music-btn").style.display = "none"
   }
 
   ngOnDestroy():void{
@@ -42,14 +44,20 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
     this.ws = WaveSurfer.create({
       container: "#waveform",
       waveColor: "white",
-      progressColor: 'rgb(104,151,117)',
-      // scrollParent: true,
-      barWidth: 5
+      progressColor: '#b80022',
+      autoCenter: false,
+      scrollParent: false,
+      barWidth: 5,
+      cursorColor: "white",
+      // backend: "MediaElement",
+      // mediaControls: true
+      responsive: true,
+      removeMediaElementOnDestroy: false
     })
     this.ws.pause()
     this.ws.load(this.tracklist[0].ref)
     this.activeTrack = this.tracklist[0].ref
-    console.log(this.activeTrack)
+    setTimeout(() => this.playHandler(this.tracklist[0].ref, 0), 1000); 
   }
 
   playHandler(ref, index){

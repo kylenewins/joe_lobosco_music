@@ -4,12 +4,16 @@
 #spacer{
     width: 75vw
 }
-#waveform{
 
+#waveform{
+    width: 100%;
 }
+
 .pause-btns{
     display: none;
+    background-color:rgb(184,15,34, .6); 
 }
+
 .spinner-btns{
     display: none;
 }
@@ -18,12 +22,50 @@
     height: 60px;
     border: none;
     margin-left: 45%;
-    margin-top:20%;
+    /* margin-top:20%; */
     color: whitesmoke;
-    font-family: 'Lobster', cursive;
-    text-shadow: 2px 2px gray;
+    font-family: 'Oswald', sans-serif;
     font-size: 200%
 }
+
 .track-names{
-    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    opacity: 1 !important;
 }
+
+.mat-card{
+    background-color: rgb(23,23,23, .6);
+}
+
+table{
+    overflow-y: scroll;
+    height: 50vh;
+    display: block;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: whitesmoke; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #666; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
+
+
+

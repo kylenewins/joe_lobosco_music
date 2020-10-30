@@ -1,20 +1,23 @@
 .grid-box{
     display: inline-block;
-    float: left;
-    width: 35vw;
-    margin-left: 10px;
+    /* float: left; */
+    width: 40vw;
+    margin: 10px;
+    background: rgb(23,23,23, 1);
 }
+
 label{
     display: inline-block;
     width: 100%;
     /* margin-left: 40%; */
     font-family: 'Oswald', sans-serif;
-    font-size: 150%
+    font-size: 200%;
+    background: rgb(23,23,23, 1);
 }
 .form-field{
     margin-bottom:10px;
-    background: none;
-    border: 1px, whitesmoke, solid;
+    background: rgb(23,23,23, 1);
+    /* border: 1px, whitesmoke, solid; */
     color: whitesmoke;
 }
 textarea{
@@ -24,10 +27,6 @@ textarea{
 #sub-btn{
     /* width: 100%; */
     display: inline-block;
-}
-#about-card{
-    background: none;
-    border: none;
 }
 #about{
     align-content: center;
@@ -40,7 +39,36 @@ textarea{
     margin-left: 45%;
     margin-top:5%;
     color: whitesmoke;
-    font-family: 'Lobster', cursive;
-    text-shadow: 2px 2px gray;
+    font-family: 'Oswald', sans-serif;
     font-size: 200%
 }
+
+/* IPHONE SIZE */
+@media only screen and (max-width: 600px) {
+    .grid-box{
+        width: 90vw;
+        height: 35vh;
+    }
+    #about-card{
+        overflow-y: scroll;
+        /* height: 50vh; */
+        display: block;
+    }
+    textarea{
+        /* width: 100%; */
+        height:100px !important;
+    }
+    #back-btn{
+        height: 10px;
+        border: none;
+        margin-left: 45%;
+        /* margin-top:5%; */
+        top: 0;
+        color: whitesmoke;
+        font-family: 'Oswald', sans-serif;
+        font-size: 200%
+    }
+}
+
+
+

@@ -5,7 +5,21 @@ p{
     margin-left: 40px;
     font-size: 200%;
     /* text-shadow: 2px 2px gray; */
-    color: whitesmoke;
+    color: rgb(23,23,23);
     font-family: 'Oswald', sans-serif;
     /* font-family: 'Fjalla One', sans-serif; */
+    /* text-decoration: underline; */
 }
+.router-btns{
+    height: 200%;
+    border: none;
+    /* margin-left: 45%; */
+    /* margin-top:20%; */
+    color: rgb(23,23,23);
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%
+}
+#music-btn{
+    display: none
+}
+
