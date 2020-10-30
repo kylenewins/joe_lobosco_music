@@ -57,7 +57,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
     this.ws.pause()
     this.ws.load(this.tracklist[0].ref)
     this.activeTrack = this.tracklist[0].ref
-    setTimeout(() => this.playHandler(this.tracklist[0].ref, 0), 1000); 
+    // setTimeout(() => this.playHandler(this.tracklist[0].ref, 0), 1000); 
   }
 
   playHandler(ref, index){
