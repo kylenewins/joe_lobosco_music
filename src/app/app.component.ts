@@ -12,7 +12,7 @@ import {Router} from '@angular/router'
     fadeIn
   ]
 })
-export class AppComponent implements AfterViewInit, OnInit{
+export class AppComponent implements AfterViewInit{
   title = 'joe-lobosco-music';
   
   constructor(
