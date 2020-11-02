@@ -22,4 +22,9 @@ p{
 #music-btn{
     display: none
 }
+#logo{
+    height: 45px;
+    width: 45px;
+    margin-bottom: 5px;
+}
 

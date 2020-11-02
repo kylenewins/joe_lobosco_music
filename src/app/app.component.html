@@ -41,7 +41,7 @@
   }
 
   .toolbar img {
-    margin: 0 16px;
+    /* margin: 0 16px; */
   }
 
   .toolbar #twitter-logo {
@@ -104,7 +104,10 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner" >
-  <a id="title" routerLink="/">Joe Lobosco Music</a>
+  <a id="title" routerLink="/">
+    <img id="logo" src="./assets/jltransparent.svg">
+    Joe Lobosco Music
+  </a>
   <div class="spacer"></div>
   <button mat-stroked-button routerLink="/contact" class="hvr-wobble-vertical button router-btns" id="contact-btn">
     Contact <fa-icon [icon]='faEnvelope'></fa-icon>

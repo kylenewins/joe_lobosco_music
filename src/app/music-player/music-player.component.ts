@@ -50,13 +50,17 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
       barWidth: 5,
       cursorColor: "white",
       // backend: "MediaElement",
-      // mediaControls: true
+      // mediaControls: true,
       responsive: true,
       removeMediaElementOnDestroy: false
     })
     this.ws.pause()
     this.ws.load(this.tracklist[0].ref)
     this.activeTrack = this.tracklist[0].ref
+
+    // var players = document.getElementsByTagName("audio")
+    // //@ts-ignore
+    // players[0].controlsList = "nodownload"
     // setTimeout(() => this.playHandler(this.tracklist[0].ref, 0), 1000); 
   }
 
@@ -88,6 +92,9 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
       this.ws.load(ref)
       this.activeTrack = ref
       this.ws.on('ready', function(){
+        // var players = document.getElementsByTagName("audio")
+        // //@ts-ignore
+        // players[0].controlsList = "nodownload"
         resolve()
       })
     })
