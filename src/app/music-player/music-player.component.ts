@@ -48,6 +48,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy{
       autoCenter: false,
       scrollParent: false,
       barWidth: 5,
+      barHeight: 2,
       cursorColor: "white",
       // backend: "MediaElement",
       // mediaControls: true,
